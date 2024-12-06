@@ -1,6 +1,6 @@
 # Definir el compilador y las banderas de compilación
 CC = g++
-CFLAGS = -std=c++20 -Wall  # -Wall muestra todos los warnings
+CFLAGS = -std=c++11 -Wall  # -Wall muestra todos los warnings
 
 # Archivos fuente y objetos
 SRC = numeric_laser.cpp simulation_parameters.cpp
