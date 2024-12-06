@@ -20,5 +20,6 @@ void Intensity::update_averages(double new_I) {
 double euler_update(double I, double g, const SimulationParameters& params, bool add_noise, std::mt19937& gen) {
     std::normal_distribution<double> noise(0, params.A);
     double f = add_noise ? noise(gen) : 0.0;
-    return I + params.dt * ((g - 1) * I - params.beta * I * I + f);
+    double new_I = I + params.dt * ((g - 1) * I - params.beta * I * I + f);
+    return new_I > 0 ? new_I : 0;
 }
