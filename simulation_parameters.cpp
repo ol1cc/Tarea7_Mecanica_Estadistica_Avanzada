@@ -2,7 +2,7 @@
 
 // Definición del constructor de SimulationParameters
 SimulationParameters::SimulationParameters(double beta, double kappa, double dt, double total_time)
-    : beta(beta), kappa(kappa), dt(dt), steps(total_time / dt), A(std::sqrt(kappa * dt)) {}
+    : beta(beta), kappa(kappa), dt(dt), steps(total_time / dt), A(std::sqrt(kappa / dt)) {}
 
 // Definición del constructor de Intensity
 Intensity::Intensity(double I)

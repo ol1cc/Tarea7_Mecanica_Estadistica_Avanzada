@@ -17,12 +17,12 @@ int main() {
     SimulationParameters params(beta, kappa, dt, total_time); // Inicialización de parámetros
 
     // Variables de la simulación
-    double g = 1.25;
+    double g = 0.75;
     bool add_noise = true;
     Intensity intensity(1);  // Condición inicial
 
 
-    bool save_singular_g = true;
+    bool save_singular_g = false;
     if(save_singular_g){
         // Generación del archivo de resultados
         std::ostringstream file_name;
@@ -56,7 +56,7 @@ int main() {
         std::cout << "Averages saved to '" << average_file_name.str() << "'" << std::endl;
     }
     // Datos variando g
-    bool g_series = false;
+    bool g_series = true;
     if(g_series){
         double dg = 0.01;
         std::ofstream gvar("data/gvar/gvar.txt");
